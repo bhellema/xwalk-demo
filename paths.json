@@ -1,6 +1,10 @@
 {
   "mappings": [
-    "/content/aem-boilerplate/:/",
-    "/content/aem-boilerplate/configuration:/.helix/config.json"
+    "/content/jck-xwalk-1/:/",
+    "/content/jck-xwalk-1/configuration:/.helix/config.json"
+  ],
+  "includes": [
+    "/content/jck-xwalk-1",
+    "/content/dam/jck-xwalk-1/blogs/internal-blog"
   ]
 }
