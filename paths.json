@@ -1,6 +1,5 @@
 {
   "mappings": [
-    "/content/xwalkdemo/:/",
-    "/content/xwalkdemo/configuration:/.helix/config.json"
+    "/content/xwalkdemo/:/"
   ]
 }
