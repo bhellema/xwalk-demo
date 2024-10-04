@@ -1,161 +1,27 @@
 [
   {
-    "id": "image",
-    "fields": [
-      {
-        "component": "reference",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "name": "imageAlt",
-        "label": "Alt Text"
-      }
-    ]
-  },
-  {
-    "id": "title",
+    "id": "page-metadata",
     "fields": [
       {
         "component": "text",
-        "name": "title",
-        "label": "Title"
-      },
-      {
-        "component": "select",
-        "name": "titleType",
-        "label": "Title Type",
-        "options": [
-          {
-            "name": "h1",
-            "value": "h1"
-          },
-          {
-            "name": "h2",
-            "value": "h2"
-          },
-          {
-            "name": "h3",
-            "value": "h3"
-          },
-          {
-            "name": "h4",
-            "value": "h4"
-          },
-          {
-            "name": "h5",
-            "value": "h5"
-          },
-          {
-            "name": "h6",
-            "value": "h6"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "button",
-    "fields": [
-      {
-        "component": "aem-content",
-        "name": "link",
-        "label": "Link"
-      },
-      {
-        "component": "text",
-        "name": "linkText",
-        "label": "Text"
-      },
-      {
-        "component": "text",
-        "name": "linkTitle",
-        "label": "Title"
-      },
-      {
-        "component": "select",
-        "name": "linkType",
-        "label": "Type",
-        "options": [
-          {
-            "name": "default",
-            "value": ""
-          },
-          {
-            "name": "primary",
-            "value": "primary"
-          },
-          {
-            "name": "secondary",
-            "value": "secondary"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "section",
-    "fields": [
-      {
-        "component": "multiselect",
-        "name": "style",
-        "label": "Style",
-        "options": [
-          {
-            "name": "Highlight",
-            "value": "highlight"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "card",
-    "fields": [
-      {
-        "component": "reference",
         "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "columns",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "number",
-        "name": "columns",
-        "value": "",
-        "label": "Columns"
+        "name": "title",
+        "label": "Title",
+        "value": ""
       },
       {
         "component": "text",
-        "valueType": "number",
-        "name": "rows",
-        "value": "",
-        "label": "Rows"
-      }
-    ]
-  },
-  {
-    "id": "fragment",
-    "fields": [
+        "valueType": "string",
+        "name": "description",
+        "label": "Description",
+        "value": ""
+      },
       {
-        "component": "aem-content",
-        "name": "reference",
-        "label": "Reference"
+          "component": "text",
+          "valueType": "string",
+          "name": "twitter:card",
+          "label": "Twitter",
+          "value": ""
       }
     ]
   },
@@ -181,58 +47,6 @@
         "name": "text",
         "value": "",
         "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "teaser",
-    "fields": [
-      {
-        "component": "reference",
-        "name": "background_image",
-        "valueType": "string",
-        "label": "Background Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "name": "background_imageAlt",
-        "label": "Image Alt",
-        "value": "",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "foreground_pretitle",
-        "label": "Pre Title",
-        "value": "",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "foreground_title",
-        "label": "Title",
-        "value": "",
-        "valueType": "string"
-      },
-      {
-        "component": "select",
-        "name": "foreground_titleType",
-        "value": "h3",
-        "label": "Title Type",
-        "valueType": "string",
-        "options": [
-          { "name":  "h2", "value": "h2" },
-          { "name":  "h3", "value": "h3" },
-          { "name":  "h4", "value": "h4" }
-        ]
-      },
-      {
-        "component": "richtext",
-        "name": "foreground_description",
-        "value": "",
-        "label": "Description",
         "valueType": "string"
       }
     ]
