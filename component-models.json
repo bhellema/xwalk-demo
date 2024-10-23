@@ -41,7 +41,7 @@
     "id": "hero",
     "fields": [
       {
-        "component": "reference",
+        "component": "text",
         "valueType": "string",
         "name": "image",
         "label": "Image",
