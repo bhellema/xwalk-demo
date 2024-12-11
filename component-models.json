@@ -64,7 +64,7 @@
         "component": "text",
         "valueType": "string",
         "name": "hero_imageAlt",
-        "label": "Alt"
+        "label": "Alt Text For Image"
       }
     ]
   }
