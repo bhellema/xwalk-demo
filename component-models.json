@@ -6,22 +6,24 @@
         "component": "text",
         "valueType": "string",
         "name": "title",
-        "label": "Title",
-        "value": ""
+        "label": "Title"
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "description",
-        "label": "Description",
-        "value": ""
+        "label": "Description"
       },
       {
-          "component": "text",
-          "valueType": "string",
-          "name": "twitter:card",
-          "label": "Twitter",
-          "value": ""
+        "component": "text",
+        "valueType": "string",
+        "name": "twitter:card",
+        "label": "Twitter"
+      },
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image"
       }
     ]
   },
@@ -41,25 +43,28 @@
     "id": "hero",
     "fields": [
       {
+        "component": "text",
+        "name": "hero_text",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "hero_title",
+        "name": "hero_textType",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
         "component": "reference",
         "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
+        "name": "hero_image",
+        "label": "Image"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
+        "name": "hero_imageAlt",
+        "label": "Alt"
       }
     ]
   }

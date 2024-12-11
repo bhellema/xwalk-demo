@@ -10,13 +10,17 @@ const createHero = (main, document) => {
     picImg.alt = picImg.alt || 'Hero image';
     const title = hero.querySelector('p:nth-child(2)');
 
-    const div = document.createElement('div');
+    const h1 = document.createElement('h1');
+    // assign the title to the h1 element
+    h1.textContent = title.textContent;
 
-    div.append(title);
+    const p = document.createElement('p');
+    p.appendChild(h1);
+    p.appendChild(picImg);
 
     const cells = [
       ['Hero'],
-      [picImg, div],
+      [p],
     ];
 
     const block = WebImporter.DOMUtils.createTable(cells, document);

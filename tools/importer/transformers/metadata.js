@@ -7,12 +7,12 @@ const createMetadata = (main, document, html, params, urlStr) => {
 
   const title = document.querySelector('title');
   if (title) {
-    meta.Title = title.textContent.replace(/[\n\t]/gm, '');
+    meta.title = title.textContent.replace(/[\n\t]/gm, '');
   }
 
   const desc = document.querySelector('head > meta[property="og:description"]');
   if (desc) {
-    meta.Description = desc.getAttribute('content').replace(/[\n\t]/gm, '');
+    meta.description = desc.getAttribute('content').replace(/[\n\t]/gm, '');
   }
 
   const twitter = document.querySelector('head > meta[name="twitter:card"]');
@@ -24,7 +24,7 @@ const createMetadata = (main, document, html, params, urlStr) => {
   if (img && img.content) {
     const el = document.createElement('img');
     el.src = cleanupImageSrc(img.content);
-    meta.Image = el;
+    meta.image = el;
   }
 
   const block = WebImporter.Blocks.getMetadataBlock(document, meta);
