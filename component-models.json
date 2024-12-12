@@ -17,7 +17,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "twitter:card",
+        "name": "twitter",
         "label": "Twitter"
       },
       {
