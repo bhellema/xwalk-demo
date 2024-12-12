@@ -5,7 +5,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "jcr:title",
+        "name": "title",
         "label": "Title"
       },
       {
