@@ -17,7 +17,7 @@ const createMetadata = (main, document, html, params, urlStr) => {
 
   const twitter = document.querySelector('head > meta[name="twitter:card"]');
   if (twitter) {
-    meta['twitter:card'] = twitter.getAttribute('content').replace(/[\n\t]/gm, '');
+    meta.twitter = twitter.getAttribute('content').replace(/[\n\t]/gm, '');
   }
 
   const img = document.querySelector('head > [property="og:image"]');
