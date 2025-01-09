@@ -24,11 +24,18 @@
       "id": "hero",
       "fields": [
         {
+          "component": "text",
+          "name": "hero_text",
+          "label": "Text",
+          "valueType": "string",
+          "value": ""
+        },
+        {
           "component": "reference",
           "valueType": "string",
           "name": "hero_image",
           "label": "Image",
-          "multi": false
+          "value": ""
         },
         {
           "component": "text",
@@ -36,12 +43,6 @@
           "name": "hero_imageAlt",
           "label": "Alt",
           "value": ""
-        },
-        {
-          "component": "richtext",
-          "name": "hero_text",
-          "label": "Text",
-          "valueType": "string"
         }
       ]
     }
