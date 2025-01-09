@@ -65,6 +65,11 @@
         "valueType": "string",
         "name": "hero_imageAlt",
         "label": "Alt Text For Image"
+      },
+      {
+        "component": "aem-tag",
+        "name": "imageTag",
+        "label": "Pick a Tag!"
       }
     ]
   }
