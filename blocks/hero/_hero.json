@@ -10,9 +10,7 @@
             "template": {
               "name": "Hero",
               "model": "hero",
-              "template": {
-                "hero_textType": "h1"
-              }
+              "hero_textType": "h1"
             }
           }
         }
