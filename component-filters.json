@@ -8,7 +8,11 @@
   {
     "id": "section",
     "components": [
-      "hero"
+      "hero",
+      "button",
+      "image",
+      "text",
+      "title"
     ]
   }
 ]
