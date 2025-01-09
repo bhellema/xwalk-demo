@@ -170,6 +170,14 @@
         "value": ""
       },
       {
+        "component": "text",
+        "name": "hero_textType",
+        "label": "Text Type",
+        "valueType": "string",
+        "value": "",
+        "hidden": true
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "hero_image",
