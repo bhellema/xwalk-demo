@@ -26,14 +26,14 @@
         {
           "component": "reference",
           "valueType": "string",
-          "name": "image",
+          "name": "hero_image",
           "label": "Image",
           "multi": false
         },
         {
           "component": "text",
           "valueType": "string",
-          "name": "imageAlt",
+          "name": "hero_imageAlt",
           "label": "Alt",
           "value": ""
         },
