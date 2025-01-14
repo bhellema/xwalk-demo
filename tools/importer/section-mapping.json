@@ -1,0 +1,56 @@
+{
+  "url": "https://www.absa.africa/world-economic-forum/davos-2024/absa-at-the-world-economic-forum-annual-meeting-2024/",
+  "sanitizedPath": "/world-economic-forum/davos-2024/absa-at-the-world-economic-forum-annual-meeting-2024/index",
+  "autoDetect": false,
+  "mapping": [
+    {
+      "id": "1",
+      "path": "/nav",
+      "sections": [
+        {
+          "id": "1-1",
+          "blocks": [],
+          "settings": {}
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "path": "/world-economic-forum/davos-2024/absa-at-the-world-economic-forum-annual-meeting-2024/index",
+      "sections": [
+        {
+          "id": "2-1",
+          "blocks": [
+            {
+              "id": "box-id--2005555374",
+              "x": 0,
+              "y": 16,
+              "width": 1268,
+              "height": 416,
+              "xpath": "/html[1]/body[1]/main[1]/article[1]/figure[1]",
+              "layout": {
+                "numCols": 1,
+                "numRows": 1
+              },
+              "color": "rgba(75, 0, 130, 0.4)",
+              "mapping": "hero",
+              "customBlockName": "ai-hero"
+            }
+          ],
+          "settings": {}
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "path": "/footer",
+      "sections": [
+        {
+          "id": "3-1",
+          "blocks": [],
+          "settings": {}
+        }
+      ]
+    }
+  ]
+}
