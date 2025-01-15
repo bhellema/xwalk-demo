@@ -35,31 +35,24 @@
           "value": ""
         },
         {
-          "component": "richtext",
-          "name": "text",
-          "value": "",
-          "label": "Text",
-          "valueType": "string"
-        },
-        {
           "component": "text",
           "valueType": "string",
-          "name": "header",
-          "label": "Header",
+          "name": "subheading",
+          "label": "Subheading",
           "value": ""
         },
         {
           "component": "text",
           "valueType": "string",
-          "name": "title",
-          "label": "Title",
+          "name": "heading",
+          "label": "Heading",
           "value": ""
         },
         {
           "component": "text",
           "valueType": "string",
-          "name": "additionalText",
-          "label": "Additional Text",
+          "name": "scrollPrompt",
+          "label": "Scroll Prompt",
           "value": ""
         }
       ]
