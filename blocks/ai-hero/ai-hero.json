@@ -44,13 +44,6 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "hero_subtitle",
-          "label": "Subtitle",
-          "value": ""
-        },
-        {
-          "component": "text",
-          "valueType": "string",
           "name": "hero_scrollIndicator",
           "label": "Scroll Indicator",
           "value": ""
