@@ -10,7 +10,7 @@
                         "template": {
                             "name": "Carousel",
                             "model": "aicarousel",
-                            "filter":"aicarousel"
+                            "filter": "aicarousel"
                         }
                     }
                 }
@@ -56,6 +56,55 @@
                     "value": "",
                     "label": "Text",
                     "valueType": "string"
+                },
+                {
+                    "component": "text",
+                    "valueType": "string",
+                    "name": "intro_text",
+                    "value": "",
+                    "label": "Intro Text"
+                },
+                {
+                    "component": "text",
+                    "valueType": "string",
+                    "name": "title_text",
+                    "value": "",
+                    "label": "Title Text"
+                },
+                {
+                    "component": "text",
+                    "valueType": "string",
+                    "name": "subtitle_text",
+                    "value": "",
+                    "label": "Subtitle Text"
+                },
+                {
+                    "component": "text",
+                    "valueType": "string",
+                    "name": "numeric_value",
+                    "value": "",
+                    "label": "Numeric Value"
+                },
+                {
+                    "component": "text",
+                    "valueType": "string",
+                    "name": "additional_info",
+                    "value": "",
+                    "label": "Additional Info"
+                },
+                {
+                    "component": "text",
+                    "valueType": "string",
+                    "name": "link_text",
+                    "value": "",
+                    "label": "Link Text"
+                },
+                {
+                    "component": "text",
+                    "valueType": "string",
+                    "name": "overlay_text",
+                    "value": "",
+                    "label": "Overlay Text"
                 }
             ]
         }
