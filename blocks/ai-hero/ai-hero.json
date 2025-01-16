@@ -40,13 +40,6 @@
           "label": "Heading",
           "value": "Thought Leadership",
           "valueType": "string"
-        },
-        {
-          "component": "text",
-          "name": "scroll_prompttext",
-          "label": "Scroll Prompt",
-          "value": "scroll for more",
-          "valueType": "string"
         }
       ]
     }
