@@ -1,14 +1,14 @@
 {
   "definitions": [
     {
-      "title": "Hero",
+      "title": "Hero with Subtitle and Title",
       "id": "ai-hero",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block",
             "template": {
-              "name": "Hero",
+              "name": "Hero with Subtitle and Title",
               "model": "ai-hero"
             }
           }
@@ -35,25 +35,32 @@
           "value": ""
         },
         {
+          "component": "text",
+          "valueType": "string",
+          "name": "subtitle",
+          "label": "Subtitle",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "title",
+          "label": "Title",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "description",
+          "label": "Description",
+          "value": ""
+        },
+        {
           "component": "richtext",
           "name": "text",
           "value": "",
           "label": "Text",
           "valueType": "string"
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "thoughtLeadershipText",
-          "label": "Thought Leadership Text",
-          "value": ""
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "scrollForMoreText",
-          "label": "Scroll for More Text",
-          "value": ""
         }
       ]
     }
