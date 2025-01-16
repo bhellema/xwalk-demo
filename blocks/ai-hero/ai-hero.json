@@ -47,13 +47,6 @@
           "name": "title",
           "label": "Title",
           "value": ""
-        },
-        {
-          "component": "richtext",
-          "name": "text",
-          "value": "",
-          "label": "Text",
-          "valueType": "string"
         }
       ]
     }
