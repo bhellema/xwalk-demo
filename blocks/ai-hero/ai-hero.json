@@ -36,8 +36,8 @@
         },
         {
           "component": "text",
-          "name": "subheading_text",
-          "label": "Subheading",
+          "name": "heading",
+          "label": "Heading",
           "value": "Thought Leadership",
           "valueType": "string"
         },
