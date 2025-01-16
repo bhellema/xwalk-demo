@@ -36,8 +36,8 @@
         },
         {
           "component": "text",
-          "name": "description",
-          "label": "Description",
+          "name": "headingtext",
+          "label": "Heading Text",
           "value": "Thought Leadership",
           "valueType": "string"
         }
