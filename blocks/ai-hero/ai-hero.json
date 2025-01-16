@@ -43,13 +43,6 @@
         },
         {
           "component": "text",
-          "name": "main_heading_text",
-          "label": "Main Heading",
-          "value": "Absa at the World Economic Forum Annual Meeting 2024",
-          "valueType": "string"
-        },
-        {
-          "component": "text",
           "name": "scroll_prompt_text",
           "label": "Scroll Prompt",
           "value": "scroll for more",
