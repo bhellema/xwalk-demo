@@ -2,14 +2,14 @@
   "definitions": [
     {
       "title": "Hero",
-      "id": "ai-hero",
+      "id": "hero",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block",
             "template": {
               "name": "Hero",
-              "model": "ai-hero"
+              "model": "hero"
             }
           }
         }
@@ -18,7 +18,7 @@
   ],
   "models": [
     {
-      "id": "ai-hero",
+      "id": "hero",
       "fields": [
         {
           "component": "reference",
@@ -40,6 +40,20 @@
           "value": "",
           "label": "Text",
           "valueType": "string"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "hero_subtitle",
+          "label": "Subtitle",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "hero_scrollIndicator",
+          "label": "Scroll Indicator",
+          "value": ""
         }
       ]
     }
