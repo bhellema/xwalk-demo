@@ -43,7 +43,7 @@
         },
         {
           "component": "text",
-          "name": "scroll_prompt_text",
+          "name": "scroll_prompttext",
           "label": "Scroll Prompt",
           "value": "scroll for more",
           "valueType": "string"
