@@ -47,20 +47,6 @@
           "name": "subtitle",
           "label": "Subtitle",
           "value": "Thought Leadership"
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "headline",
-          "label": "Headline",
-          "value": "Absa at the World Economic Forum Annual Meeting 2024"
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "scrollText",
-          "label": "Scroll Text",
-          "value": "scroll for more"
         }
       ]
     }
