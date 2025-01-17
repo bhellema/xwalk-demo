@@ -40,13 +40,6 @@
           "value": "",
           "label": "Text",
           "valueType": "string"
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "subtitle",
-          "label": "Subtitle",
-          "value": ""
         }
       ]
     }
