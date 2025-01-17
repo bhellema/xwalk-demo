@@ -244,13 +244,6 @@
         "name": "cta2",
         "label": "CTA 2",
         "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "cta2Text",
-        "label": "CTA 2 Text",
-        "value": ""
       }
     ]
   }
