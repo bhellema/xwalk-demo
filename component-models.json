@@ -220,59 +220,5 @@
         "value": ""
       }
     ]
-  },
-  {
-    "id": "ai-hero",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "mainHeading",
-        "label": "Main Heading",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "quote",
-        "label": "Quote",
-        "value": ""
-      },
-      {
-        "component": "aem-content",
-        "valueType": "string",
-        "name": "cta1",
-        "label": "CTA 1",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "cta1Text",
-        "label": "CTA 1 Text",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "cta2",
-        "label": "CTA 2",
-        "value": ""
-      }
-    ]
   }
 ]
