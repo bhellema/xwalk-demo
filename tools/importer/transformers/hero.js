@@ -1,12 +1,14 @@
 /* global WebImporter */
 import { cleanupImageSrc } from '../utils/image-utils.js';
 
-const createHero = (main, document) => {
+const createHero = (main, document, params) => {
+  const { originalURL } = params;
+
   const hero = main.querySelector('.hero');
 
   if (hero) {
     const picImg = hero.querySelector('picture > img');
-    picImg.src = cleanupImageSrc(picImg.src);
+    picImg.src = cleanupImageSrc(picImg.src, originalURL);
     picImg.alt = picImg.alt || 'Hero image';
     const title = hero.querySelector('p:nth-child(2)');
 
