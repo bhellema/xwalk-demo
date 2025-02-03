@@ -1,5 +1,4 @@
 main .hero-container {
-    margin-bottom: -140px;
     padding: 0;
 }
 
@@ -33,6 +32,10 @@ main .hero-container > .hero-wrapper {
         align-items: center;
         line-height: unset;
     }
+}
+
+.hero p {
+    margin: 0;
 }
 
 .hero picture {
