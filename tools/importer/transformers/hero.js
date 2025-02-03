@@ -15,6 +15,7 @@ const createHero = (main, document, params) => {
     const h1 = document.createElement('h1');
     // assign the title to the h1 element
     h1.textContent = title.textContent;
+    title.remove();
 
     const p = document.createElement('p');
     p.appendChild(h1);

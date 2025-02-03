@@ -27,12 +27,10 @@ main .hero-container > .hero-wrapper {
         width: 100%;
         position: absolute;
         bottom: 50%;
-        padding: 8px 0;
         font-weight: normal;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 80px;
         line-height: unset;
     }
 }
