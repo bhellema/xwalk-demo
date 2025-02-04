@@ -1,0 +1,48 @@
+{
+  "definitions": [
+    {
+      "title": "Absa at the World Economic Forum Annual Meeting 2024",
+      "id": "absa-wef-2024",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "wef2024Block",
+            "template": {
+              "name": "wef2024Template",
+              "model": "wef2024Model"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "wef2024Model",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "thoughtLeadership",
+          "label": "Thought Leadership",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "eventTitle",
+          "label": "Event Title",
+          "multi": false
+        },
+        {
+          "component": "image",
+          "valueType": "string",
+          "name": "backgroundImage",
+          "label": "Background Image",
+          "multi": false
+        }
+      ]
+    }
+  ],
+  "filters": []
+}
