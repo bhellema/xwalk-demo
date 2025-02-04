@@ -44,13 +44,6 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "thoughtLeadershipLabel",
-          "label": "Thought Leadership Label",
-          "value": ""
-        },
-        {
-          "component": "text",
-          "valueType": "string",
           "name": "scrollIndicator",
           "label": "Scroll Indicator",
           "value": "scroll for more"
