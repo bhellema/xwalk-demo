@@ -6,13 +6,13 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "title",
+          "name": "jcr:title",
           "label": "Title"
         },
         {
           "component": "text",
           "valueType": "string",
-          "name": "description",
+          "name": "jcr:description",
           "label": "Description"
         },
         {
