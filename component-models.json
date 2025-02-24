@@ -226,10 +226,13 @@
     "fields": [
       {
         "component": "aem-content",
-        "valueType": "string",
-        "name": "reference",
-        "label": "Reference",
-        "value": ""
+        "name": "link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Text"
       }
     ]
   }
