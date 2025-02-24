@@ -2,7 +2,7 @@ body.modal-open {
     overflow: hidden;
 }
 
-.model a.button {
+.modal a.button {
     color: white;
     text-decoration: none;
 }
