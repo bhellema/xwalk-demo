@@ -230,7 +230,7 @@
         "label": "Link"
       },
       {
-        "component": "richtext",
+        "component": "text",
         "name": "linkText",
         "label": "Text"
       }
