@@ -8,6 +8,7 @@ body.modal-open {
 }
 
 .modal a.button {
+    color: white;
     text-decoration: none;
     scale: 0.7;
     background-color: inherit;
