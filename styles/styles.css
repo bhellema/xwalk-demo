@@ -247,3 +247,7 @@ main .section.light,
 main .section.highlight {
     background-color: var(--light-color);
 }
+
+main .section .default-content-wrapper h1 {
+    margin: 5px 0;
+}
