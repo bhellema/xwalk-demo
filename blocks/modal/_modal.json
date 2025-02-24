@@ -26,7 +26,7 @@
           "label": "Link"
         },
         {
-          "component": "text",
+          "component": "richtext",
           "name": "linkText",
           "label": "Text"
         }
