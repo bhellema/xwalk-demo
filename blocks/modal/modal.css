@@ -1,10 +1,17 @@
+.modal-wrapper {
+    position: relative;
+    top: -120px;
+}
+
 body.modal-open {
     overflow: hidden;
 }
 
 .modal a.button {
-    color: white;
     text-decoration: none;
+    scale: 0.7;
+    background-color: inherit;
+    border: none;
 }
 
 .modal dialog::backdrop {
