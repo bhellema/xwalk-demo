@@ -225,7 +225,7 @@
     "id": "modal",
     "fields": [
       {
-        "component": "aem-content",
+        "component": "text",
         "valueType": "string",
         "name": "label",
         "label": "Label",
