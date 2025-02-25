@@ -1,22 +1,21 @@
 .teaser.block {
     height: 490px;
+    width: 100%;
 }
 
 /* foreground container, flex (text + spacer), always on top */
 .teaser.block > .foreground {
     position: relative;
+    width: 100%;
+    box-sizing: border-box;
     display: flex;
-    padding: 70px 40px;;
-    background-color: unset;
-    max-width: 515px;
-
+    padding: 10px 30px;
+    justify-content: center;
 }
 
-@media (width >= 900px) {
+@media (width >= 800px) {
     .teaser.block > .foreground {
         padding: 10px 87px;
-        display: flex;
-        justify-content: center;
         flex-direction: column;
         height: 100%;
     }
@@ -28,7 +27,7 @@
     text-align: left;
     font: normal normal bold 12px/16px Roboto;
     letter-spacing: 0.96px;
-    color: #FFFFFF;
+    color: #FFF;
     text-transform: uppercase;
     opacity: 1;
 }
@@ -36,8 +35,8 @@
 
 .teaser.block > .foreground > .text > .title :where(h1,h2,h3,h4,h5,h6) {
     margin: 0;
-    color: #FFFFFF;
-    letter-spacing: 0px;
+    color: #FFF;
+    letter-spacing: 0;
     font: normal normal normal 56px/56px Baskerville;
 }
 
@@ -50,10 +49,15 @@
     color: #58181D;
 }
 
+.teaser.block > .foreground > .text > .cta {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 .teaser.block > .foreground > .text > .cta > a.button {
     border: 0;
-    color: #FFFFFF;
+    color: #FFF;
 }
 
 /* spacer */
@@ -70,15 +74,19 @@
 
 /* the background image container */
 .teaser.block > .background {
-    display:inline-block;
+    display: inline-block;
     position: absolute;
     box-sizing: border-box;
+    filter: brightness(70%);
+    width: 100%;
+    max-height: 300px;
+    max-width: 1120px;
 }
 
 .teaser.block > .background img {
-    width: auto;
+    width: 1120px;
     object-fit: cover;
-    height: revert-layer;
+    max-height: 488px;
 }
 
 .teaser.block .long-description {
