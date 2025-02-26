@@ -1,6 +1,7 @@
 .teaser.block {
     height: 490px;
     width: 100%;
+    position: relative;
 }
 
 /* foreground container, flex (text + spacer), always on top */
@@ -9,14 +10,14 @@
     width: 100%;
     box-sizing: border-box;
     display: flex;
-    padding: 10px 30px;
+    padding: 70px 30px;
+    flex-direction: column;
     justify-content: center;
 }
 
 @media (width >= 800px) {
     .teaser.block > .foreground {
-        padding: 10px 87px;
-        flex-direction: column;
+        padding: 0 87px;
         height: 100%;
     }
 }
@@ -32,13 +33,23 @@
     opacity: 1;
 }
 
-
 .teaser.block > .foreground > .text > .title :where(h1,h2,h3,h4,h5,h6) {
     margin: 0;
     color: #FFF;
     letter-spacing: 0;
     font: normal normal normal 56px/56px Baskerville;
 }
+
+.teaser.block > .foreground > .text > .title h5 {
+    font-size: 36px;
+}
+
+@media (width >= 800px) {
+    .teaser.block > .foreground > .text > .title h5 {
+        font-size: 56px;
+    }
+}
+
 
 
 .teaser.block.dark > .foreground > .text > .title {
@@ -52,8 +63,17 @@
 .teaser.block > .foreground > .text > .cta {
     display: flex;
     justify-content: space-between;
+
+    a {
+        font-size: 16px;
+    }
 }
 
+@media (width >= 800px) {
+    .teaser.block > .foreground > .text > .cta a {
+        font-size: 24px;
+    }
+}
 
 .teaser.block > .foreground > .text > .cta > a.button {
     border: 0;
@@ -79,8 +99,6 @@
     box-sizing: border-box;
     filter: brightness(70%);
     width: 100%;
-    max-height: 300px;
-    max-width: 1120px;
 }
 
 .teaser.block > .background img {
