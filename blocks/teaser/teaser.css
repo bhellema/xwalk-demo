@@ -92,13 +92,17 @@
     order: 0;
 }
 
-/* the background image container */
 .teaser.block > .background {
     display: inline-block;
     position: absolute;
     box-sizing: border-box;
-    filter: brightness(70%);
     width: 100%;
+}
+
+.teaser.block.dark {
+    .background {
+        filter: brightness(70%);
+    }
 }
 
 .teaser.block > .background img {

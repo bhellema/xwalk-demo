@@ -6,12 +6,14 @@ const createTeaser = (main, document, params) => {
   const teaser = main.querySelector('.teaser');
 
   if (teaser) {
-    const img = teaser.querySelector('picture > img');
+    const div1 = teaser.querySelector(':scope div:nth-of-type(1)');
+    const img = div1.querySelector('picture > img');
     img.src = cleanupImageSrc(img.src, originalURL);
 
-    const eyebrow = teaser.querySelector('h5');
-    const discount = teaser.querySelector(':scope div:nth-of-type(3)').textContent.trim();
-    const urgent = teaser.querySelector(':scope div:nth-of-type(4)').textContent.trim();
+    const heading = teaser.querySelector(':scope div:nth-of-type(2)');
+    const eyebrow = teaser.querySelector(':scope div:nth-of-type(3) h5');
+    const longDesc = teaser.querySelector(':scope div:nth-of-type(4)');
+    const shortDesc = teaser.querySelector(':scope div:nth-of-type(5)');
     const cta1 = teaser.querySelector(':scope div:nth-of-type(6) a');
     const cta2 = teaser.querySelector(':scope div:nth-of-type(7) a');
 
@@ -19,8 +21,9 @@ const createTeaser = (main, document, params) => {
       ['Teaser'],
       [img],
       [eyebrow.textContent.trim()],
-      [discount],
-      [urgent],
+      [heading.textContent.trim()],
+      [longDesc.textContent.trim()],
+      [shortDesc.textContent.trim()],
       [cta1],
       [cta2],
     ];

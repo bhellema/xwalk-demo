@@ -13,7 +13,7 @@
               "title": "Teaser Title",
               "titleType": "h3",
               "longDescr": "",
-              "classes": ["light", "left"]
+              "classes": ["dark"]
             }
           }
         }
