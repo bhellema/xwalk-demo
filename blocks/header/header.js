@@ -169,5 +169,7 @@ export default async function decorate(block) {
   };
 
   const observer = new IntersectionObserver(observerCallback, options);
-  observer.observe(promotion);
+  if (promotion) {
+    observer.observe(promotion);
+  }
 }

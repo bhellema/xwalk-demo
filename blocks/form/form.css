@@ -1,3 +1,11 @@
+.form {
+    padding: 30px;
+
+    button[type='submit'] {
+        color: white;
+    }
+}
+
 .form .field-wrapper {
   display: grid;
   grid-auto-flow: row;
@@ -14,7 +22,7 @@
 
 .form form > .field-wrapper + .field-wrapper,
 .form form fieldset .field-wrapper + .field-wrapper {
-  margin-top: 24px;
+  margin-top: 14px;
 }
 
 .form form > .selection-wrapper + .selection-wrapper,
