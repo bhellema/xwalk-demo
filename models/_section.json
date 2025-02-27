@@ -46,7 +46,8 @@
         "columns",
         "fragment",
         "modal",
-        "teaser"
+        "teaser",
+        "form"
       ]
     }
   ]
