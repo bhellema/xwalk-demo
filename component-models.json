@@ -264,7 +264,7 @@
         "multi": false
       },
       {
-        "component": "text",
+        "component": "text-input",
         "valueType": "string",
         "name": "fileReferenceAlt",
         "value": "",
