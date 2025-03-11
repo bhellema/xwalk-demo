@@ -2,7 +2,8 @@
   "mappings": [
     "/content/xwalk/:/",
     "/content/xwalk/configuration:/.helix/config.json",
-    "/content/xwalk/forms/orders:/forms/orders.json"
+    "/content/xwalk/forms/orders:/forms/orders.json",
+    "/content/xwalk.resource/query-index.json:/query-index.json"
   ],
   "includes": [
     "/content/xwalk/"
