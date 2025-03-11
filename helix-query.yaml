@@ -1,0 +1,14 @@
+version: 1
+indices:
+  default:
+    include:
+      - /**
+    target: /query-index.json
+    properties:
+      description:
+        select: head > meta[property="og:description"]
+        value: attribute(el, 'content')
+      title:
+        select: head > meta[property="og:title"]
+        value: attribute(el, 'content')
+
