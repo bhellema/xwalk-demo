@@ -11,7 +11,7 @@ indices:
       title:
         select: head > meta[property="og:title"]
         value: attribute(el, 'content')
-      imgCnt:
-        select: document.querySelectorAll("body main img")
-        value: el.length
+      publish-data:
+        select: head > meta[name="published-time"]
+        value: attribute(el, 'content')
 
