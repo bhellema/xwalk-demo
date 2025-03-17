@@ -1,5 +1,5 @@
 /* global WebImporter */
-import { cleanupImageSrc } from '../utils/image-utils.js';
+import { cleanUpSrcUrl } from '../utils/image-utils.js';
 
 const createCards = (main, document, params) => {
   const { originalURL } = params;
@@ -10,7 +10,7 @@ const createCards = (main, document, params) => {
     for (let i = 0; i < cards.children.length; i += 1) {
       const cardItem = cards.children[i];
       const picImg = cardItem.querySelector('picture > img');
-      picImg.src = cleanupImageSrc(picImg.src, originalURL);
+      picImg.src = cleanUpSrcUrl(picImg.src, originalURL);
       picImg.alt = picImg.alt || 'Plush Item';
 
       const title = cardItem.querySelector(':scope div:nth-of-type(2) > p');

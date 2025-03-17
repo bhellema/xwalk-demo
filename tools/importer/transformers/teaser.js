@@ -1,5 +1,5 @@
 /* global WebImporter */
-import { cleanupImageSrc } from '../utils/image-utils.js';
+import { cleanUpSrcUrl } from '../utils/image-utils.js';
 
 const createTeaser = (main, document, params) => {
   const { originalURL } = params;
@@ -8,7 +8,7 @@ const createTeaser = (main, document, params) => {
   if (teaser) {
     const div1 = teaser.querySelector(':scope div:nth-of-type(1)');
     const img = div1.querySelector('picture > img');
-    img.src = cleanupImageSrc(img.src, originalURL);
+    img.src = cleanUpSrcUrl(img.src, originalURL);
 
     const heading = teaser.querySelector(':scope div:nth-of-type(2)');
     const eyebrow = teaser.querySelector(':scope div:nth-of-type(3) h5');

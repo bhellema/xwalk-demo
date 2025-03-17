@@ -39,13 +39,19 @@
           "component": "reference",
           "valueType": "string",
           "name": "image",
-          "label": "Link"
+          "label": "Image"
         },
         {
           "component": "reference",
           "valueType": "string",
           "name": "imageAlt",
-          "label": "Link"
+          "label": "Image Alt"
+        },
+        {
+          "component": "aem-content",
+          "valueType": "string",
+          "name": "link",
+          "label": "Product Link"
         },
         {
           "component": "text",

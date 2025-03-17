@@ -1,5 +1,5 @@
 /* global WebImporter */
-import { cleanupImageSrc } from '../utils/image-utils.js';
+import { cleanUpSrcUrl } from '../utils/image-utils.js';
 
 // eslint-disable-next-line no-unused-vars
 const createMetadata = (main, document, html, params, urlStr) => {
@@ -23,7 +23,7 @@ const createMetadata = (main, document, html, params, urlStr) => {
   const img = document.querySelector('head > [property="og:image"]');
   if (img && img.content) {
     const el = document.createElement('img');
-    el.src = cleanupImageSrc(img.content);
+    el.src = cleanUpSrcUrl(img.content);
     meta.image = el;
   }
 

@@ -1,22 +1,23 @@
 /* global WebImporter */
-import { cleanupImageSrc } from '../utils/image-utils.js';
+import { cleanUpSrcUrl } from '../utils/image-utils.js';
 
 function getFeaturedItemByPath(path, items) {
   return items.find((item) => path.endsWith(item.path));
 }
 
 const createFeatured = async (main, document, params) => {
-  const queryJson = await fetch('/query-index.json', {
-    mode: 'cors',
-  });
+  const { originalURL } = params;
+
+  const queryJson = await fetch('/query-index.json');
   const queryIndex = await queryJson.json();
+
   const featured = main.querySelector('.featured');
   const featuredItems = featured.querySelectorAll('.featured a');
 
   const rows = [['Featured']];
   featuredItems.forEach((featuredItem) => {
     const data = getFeaturedItemByPath(featuredItem.href, queryIndex.data);
-    const src = cleanupImageSrc(data.image, params.originalURL);
+    const src = cleanUpSrcUrl(data.image, params.originalURL);
     const img = document.createElement('img');
     img.src = src;
     img.alt = data.title;
@@ -29,6 +30,7 @@ const createFeatured = async (main, document, params) => {
 
     rows.push([
       img,
+      data.path,
       titleEl,
       categoryEl,
     ]);

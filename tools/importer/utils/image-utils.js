@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/prefer-default-export
-export function cleanupImageSrc(src, origin) {
+export function cleanUpSrcUrl(src, origin) {
   let imgUrl;
   try {
     imgUrl = new URL(src);
