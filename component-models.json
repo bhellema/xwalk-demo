@@ -187,7 +187,7 @@
         "label": "Image"
       },
       {
-        "component": "reference",
+        "component": "text",
         "valueType": "string",
         "name": "imageAlt",
         "label": "Image Alt"
