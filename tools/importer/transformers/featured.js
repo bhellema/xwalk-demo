@@ -30,7 +30,7 @@ const createFeatured = async (main, document, params) => {
 
     rows.push([
       img,
-      data.path,
+      cleanUpSrcUrl(data.path, originalURL),
       titleEl,
       categoryEl,
     ]);
