@@ -1,5 +1,5 @@
 /*
- * Copyright 2023 Adobe. All rights reserved.
+ * Copyright 2024 Adobe. All rights reserved.
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
  * of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -35,15 +35,16 @@ export default {
     // define the main element: the one that will be transformed to Markdown
     const main = document.body;
 
-    transformers.forEach(
-      (fn) => fn.call(this, main, document, params, url),
+    const p = transformers.map(
+      async (fn) => fn.call(this, main, document, params, url),
     );
+
+    await Promise.all(p);
 
     // use helper method to remove header, footer, etc.
     WebImporter.DOMUtils.remove(main, [
       'header',
       'footer',
-      '.featured',
     ]);
 
     // create the metadata block and append it to the main element
