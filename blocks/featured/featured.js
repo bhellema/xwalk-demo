@@ -2,13 +2,14 @@ import { createOptimizedPicture } from '../../scripts/aem.js';
 import {
   a, div, h3, li, p, span, ul,
 } from '../../scripts/dom.js';
+import { moveInstrumentation } from '../../scripts/scripts.js';
 
 export default async function decorate(block) {
   /* change to ul, li */
   const ulEl = ul();
   [...block.children].forEach((row) => {
     const liEl = li({ class: 'featured-card' });
-
+    moveInstrumentation(row, liEl);
     const anchor = row.querySelector('a');
     const pic = row.querySelector('picture > img');
     const title = row.querySelector('div:nth-child(3)');
