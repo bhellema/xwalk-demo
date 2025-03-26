@@ -19,13 +19,13 @@ const createTeaser = (main, document, params) => {
 
     const rows = [
       ['Teaser'],
-      [img],
-      [eyebrow.textContent.trim()],
-      [heading.textContent.trim()],
-      [longDesc.textContent.trim()],
-      [shortDesc.textContent.trim()],
-      [cta1],
-      [cta2],
+      [img || ''],
+      [eyebrow.textContent.trim() || ''],
+      [heading.textContent.trim() || ''],
+      [longDesc.textContent.trim() || ''],
+      [shortDesc.textContent.trim() || ''],
+      [cta1 || ''],
+      [cta2 || ''],
     ];
 
     const block = WebImporter.DOMUtils.createTable(rows, document);
