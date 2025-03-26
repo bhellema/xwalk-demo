@@ -1,16 +1,16 @@
 export function decorateButtons(...buttons) {
   return buttons
-  .map((div) => {
-    const a = div.querySelector('a');
-    if (a) {
-      a.classList.add('button');
-      if (a.parentElement.tagName === 'EM') a.classList.add('secondary');
-      if (a.parentElement.tagName === 'STRONG') a.classList.add('primary');
-      return a.outerHTML;
-    }
-    return '';
-  })
-  .join('');
+    .map((div) => {
+      const a = div.querySelector('a');
+      if (a) {
+        a.classList.add('button');
+        if (a.parentElement.tagName === 'EM') a.classList.add('secondary');
+        if (a.parentElement.tagName === 'STRONG') a.classList.add('primary');
+        return a.outerHTML;
+      }
+      return '';
+    })
+    .join('');
 }
 
 export function generateTeaserDOM(props, classes) {
@@ -24,10 +24,10 @@ export function generateTeaserDOM(props, classes) {
     <div class='foreground'>
       <div class='text'>
         ${
-    eyebrow.textContent.trim() !== ''
-      ? `<div class='eyebrow'>${eyebrow.textContent.trim().toUpperCase()}</div>`
-      : ``
-  }
+  eyebrow.textContent.trim() !== ''
+    ? `<div class='eyebrow'>${eyebrow.textContent.trim().toUpperCase()}</div>`
+    : ''
+}
         <div class='title'>${title.innerHTML}</div>
         <div class='long-description'>${longDescr.innerHTML}</div>
         <div class='cta'>${decorateButtons(firstCta, secondCta)}</div>
@@ -40,8 +40,8 @@ export function generateTeaserDOM(props, classes) {
   const backgroundColor = [...classes].find((cls) => cls.startsWith('bg-'));
   if (backgroundColor) {
     teaserDOM
-    .querySelector('.foreground')
-    .style.setProperty('--teaser-background-color', `var(--${backgroundColor.substr(3)})`);
+      .querySelector('.foreground')
+      .style.setProperty('--teaser-background-color', `var(--${backgroundColor.substr(3)})`);
   }
 
   // add final teaser DOM and classes if used as child component
