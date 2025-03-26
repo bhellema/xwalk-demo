@@ -3,7 +3,7 @@ import { cleanUpSrcUrl } from '../utils/image-utils.js';
 
 const createCards = (main, document, params) => {
   const { originalURL } = params;
-  const cards = main.querySelector('.cards ul');
+  const cards = main.querySelector('.cards');
 
   const cellItems = [];
   if (cards) {
