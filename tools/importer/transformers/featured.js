@@ -6,7 +6,7 @@ function getFeaturedItemByPath(path, items) {
 }
 
 const createFeatured = async (main, document, params) => {
-  const { originalURL } = params;
+  const { sitePath } = params;
 
   const queryJson = await fetch('/query-index.json');
   const queryIndex = await queryJson.json();
@@ -30,7 +30,7 @@ const createFeatured = async (main, document, params) => {
 
     rows.push([
       img,
-      cleanUpSrcUrl(data.path, originalURL),
+      `${sitePath}${data.path}`,
       titleEl,
       categoryEl,
     ]);
