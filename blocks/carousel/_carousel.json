@@ -25,8 +25,7 @@
             "resourceType": "core/franklin/components/block/v1/block/item",
             "template": {
               "name": "Carousel Slide",
-              "model": "carousel-item",
-              "filter": "carousel-item"
+              "model": "carousel-item"
             }
           }
         }
@@ -65,13 +64,6 @@
     {
       "id": "carousel",
       "components": ["carousel-item"]
-    },
-    {
-      "id": "carousel-item",
-      "components": [
-        "text",
-        "image"
-      ]
     }
   ]
 }
