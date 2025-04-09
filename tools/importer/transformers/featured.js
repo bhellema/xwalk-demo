@@ -12,6 +12,9 @@ const createFeatured = async (main, document, params) => {
   const queryIndex = await queryJson.json();
 
   const featured = main.querySelector('.featured');
+  if (!featured) {
+    return;
+  }
   const featuredItems = featured.querySelectorAll('.featured a');
 
   const rows = [['Featured']];
