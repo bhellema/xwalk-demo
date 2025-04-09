@@ -26,7 +26,7 @@
 }
 
 .carousel .carousel-slide {
-    /*transition: transform 0.5s ease;*/
+    transition: transform 0.5s ease;
     flex: 0 0 100%;
     scroll-snap-align: start;
     display: flex;
