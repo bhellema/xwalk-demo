@@ -1,5 +1,6 @@
 import { fetchPlaceholders } from '../../scripts/aem.js';
 import registerTouchHandlers from './touch.js';
+import { moveInstrumentation } from '../../scripts/scripts.js';
 
 // the id of the currently sliding carousel can be used to cancel the timeout
 let intervalId = 0;
@@ -33,17 +34,26 @@ function updateActiveSlide(slide) {
 }
 
 function setSlideInterval(block) {
+  if (window.location.host.indexOf('adobeaemcloud') !== -1) {
+    return;
+  }
+
   intervalId = setTimeout(() => {
     const indicators = [...block.querySelectorAll('.carousel-slide-indicator')];
     const button = indicators.find((indicator) => indicator.querySelector('button').hasAttribute('disabled'));
     if (button) {
-      const nextButton = indicators[(indicators.indexOf(button) + 1) % indicators.length].querySelector('button');
+      const nextButton = indicators[(indicators.indexOf(button) + 1)
+      % indicators.length].querySelector('button');
       nextButton.click();
     }
   }, 5000);
 }
 
 function changeSlide(block, slideIndex = 0) {
+  if (window.location.host.indexOf('adobeaemcloud') !== -1) {
+    return;
+  }
+
   if (intervalId !== 0) {
     clearTimeout(intervalId);
     setSlideInterval(block);
@@ -59,7 +69,7 @@ function changeSlide(block, slideIndex = 0) {
   block.querySelector('.carousel-slides').scrollTo({
     top: 0,
     left: activeSlide.offsetLeft,
-    behavior: 'smooth',
+    behavior: window.location.host.indexOf('adobeaemcloud') === -1 ? 'smooth' : 'instant',
   });
 }
 
@@ -73,13 +83,6 @@ function bindEvents(block) {
       changeSlide(block, parseInt(slideIndicator.dataset.targetSlide, 10));
     });
   });
-
-  // block.querySelector('.slide-prev').addEventListener('click', () => {
-  //   showSlide(block, parseInt(block.dataset.activeSlide, 10) - 1);
-  // });
-  // block.querySelector('.slide-next').addEventListener('click', () => {
-  //   showSlide(block, parseInt(block.dataset.activeSlide, 10) + 1);
-  // });
 
   const slideObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -129,11 +132,13 @@ export default async function decorate(block) {
   slidesWrapper.classList.add('carousel-slides');
   block.prepend(slidesWrapper);
 
-  registerTouchHandlers(
-    slidesWrapper,
-    () => changeSlide(block, parseInt(block.dataset.activeSlide, 10) - 1),
-    () => changeSlide(block, parseInt(block.dataset.activeSlide, 10) + 1),
-  );
+  if (window.location.host.indexOf('adobeaemcloud') !== -1) {
+    registerTouchHandlers(
+      slidesWrapper,
+      () => changeSlide(block, parseInt(block.dataset.activeSlide, 10) - 1),
+      () => changeSlide(block, parseInt(block.dataset.activeSlide, 10) + 1),
+    );
+  }
 
   let slideIndicators;
   if (!isSingleSlide) {
@@ -148,7 +153,6 @@ export default async function decorate(block) {
   rows.forEach((row, idx) => {
     const slide = createSlide(row, idx, carouselId);
     slidesWrapper.append(slide);
-
     if (slideIndicators) {
       const indicator = document.createElement('li');
       indicator.classList.add('carousel-slide-indicator');
@@ -156,6 +160,8 @@ export default async function decorate(block) {
       indicator.innerHTML = '<button type="button"></button>';
       slideIndicators.append(indicator);
     }
+
+    moveInstrumentation(row, slide);
     row.remove();
   });
 
@@ -166,5 +172,7 @@ export default async function decorate(block) {
     bindEvents(block);
   }
 
-  setSlideInterval(block);
+  if (window.location.host.indexOf('adobeaemcloud') === -1) {
+    setSlideInterval(block);
+  }
 }
