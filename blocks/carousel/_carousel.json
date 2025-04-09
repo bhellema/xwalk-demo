@@ -55,8 +55,7 @@
           "name": "content_text",
           "value": "",
           "label": "Text",
-          "valueType": "string",
-          "hidden": true
+          "valueType": "string"
         }
       ]
     }
