@@ -180,7 +180,8 @@
         "name": "content_text",
         "value": "",
         "label": "Text",
-        "valueType": "string"
+        "valueType": "string",
+        "hidden": true
       }
     ]
   },
