@@ -36,6 +36,13 @@
     ]
   },
   {
+    "id": "carousel-item",
+    "components": [
+      "text",
+      "image"
+    ]
+  },
+  {
     "id": "columns",
     "components": [
       "column"
