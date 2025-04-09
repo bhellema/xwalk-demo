@@ -48,7 +48,8 @@
         "fragment",
         "modal",
         "teaser",
-        "form"
+        "form",
+        "carousel"
       ]
     }
   ]
