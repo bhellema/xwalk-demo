@@ -186,7 +186,7 @@
         "component": "text",
         "name": "content_subtext",
         "value": "",
-        "label": "Text",
+        "label": "Sub Text",
         "valueType": "string"
       }
     ]
