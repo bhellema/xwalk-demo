@@ -28,9 +28,12 @@ const createCarousel = async (main, document, params) => {
 
     // Get the heading if it exists
     const heading = slide.querySelector('h2');
+    const subText = slide.querySelector('p');
+    const subTextValue = subText === null ? '' : subText.textContent.trim();
 
-    // Add the slide to the rows array
-    rows.push([img || '', heading ? heading.textContent.trim() : '']);
+    rows.push([img || '',
+      heading ? heading.textContent.trim() : '',
+      subTextValue]);
   });
 
   // Create the table and replace the carousel content

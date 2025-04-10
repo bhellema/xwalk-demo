@@ -56,6 +56,13 @@
           "value": "",
           "label": "Text",
           "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "content_subtext",
+          "value": "",
+          "label": "Text",
+          "valueType": "string"
         }
       ]
     }
