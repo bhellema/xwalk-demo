@@ -58,7 +58,7 @@
     object-fit: contain;
 }
 
-.carousel .carousel-slide .carousel-slide-content {
+.carousel .carousel-slide .carousel-slide-container {
     z-index: 1;
     padding: 1rem;
     margin: 1.5rem 3rem;
@@ -69,9 +69,18 @@
     border-radius: 20px;
 
     p {
+        margin: 0;
+    }
+
+    div:nth-of-type(1) {
         color: var(--featured-color);
         font-size: 3rem;
         text-transform: uppercase;
+    }
+
+    div:nth-of-type(2) {
+        color: var(--light-color);
+        font-size: 1.5rem;
     }
 }
 
