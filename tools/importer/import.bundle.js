@@ -174,6 +174,9 @@ var CustomImportScript = (() => {
     const queryJson = yield fetch("/query-index.json");
     const queryIndex = yield queryJson.json();
     const featured = main.querySelector(".featured");
+    if (!featured) {
+      return;
+    }
     const featuredItems = featured.querySelectorAll(".featured a");
     const rows = [["Featured"]];
     featuredItems.forEach((featuredItem) => {
@@ -199,12 +202,38 @@ var CustomImportScript = (() => {
   });
   var featured_default = createFeatured;
 
+  // tools/importer/transformers/carousel.js
+  var createCarousel = (main, document, params) => __async(void 0, null, function* () {
+    const { originalURL } = params;
+    const carousel = main.querySelector(".carousel");
+    if (!carousel) {
+      return;
+    }
+    const slides = carousel.querySelectorAll(":scope > div");
+    const rows = [["Carousel"]];
+    slides.forEach((slide) => {
+      const picture = slide.querySelector("picture");
+      if (!picture) return;
+      const img = picture.querySelector("img");
+      if (img) {
+        img.src = cleanUpSrcUrl(img.src, originalURL);
+      }
+      const heading = slide.querySelector("h2");
+      rows.push([img || "", heading ? heading.textContent.trim() : ""]);
+    });
+    const block = WebImporter.DOMUtils.createTable(rows, document);
+    carousel.innerHTML = "";
+    carousel.append(block);
+  });
+  var carousel_default = createCarousel;
+
   // tools/importer/transformers/index.js
   var transformers = [
     hero_default,
     featured_default,
     cards_default,
-    teaser_default
+    teaser_default,
+    carousel_default
   ];
   var postTransformers = [
     metadata_default

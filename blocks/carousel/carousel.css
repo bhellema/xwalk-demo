@@ -68,8 +68,9 @@
     background-color: rgb(255 255 2555 / 10%);
     border-radius: 20px;
 
-    h2 {
+    p {
         color: var(--featured-color);
+        font-size: 3rem;
         text-transform: uppercase;
     }
 }
