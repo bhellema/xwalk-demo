@@ -48,18 +48,18 @@
           "valueType": "string",
           "name": "media_imageAlt",
           "value": "",
-          "label": "Bacgkround Alt"
+          "label": "Background Alt"
         },
         {
-          "component": "richtext",
-          "name": "content_text",
+          "component": "text",
+          "name": "text",
           "value": "",
           "label": "Text",
           "valueType": "string"
         },
         {
           "component": "text",
-          "name": "content_subtext",
+          "name": "subscript",
           "value": "",
           "label": "Sub Text",
           "valueType": "string"
