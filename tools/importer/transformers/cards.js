@@ -7,14 +7,15 @@ const createCards = (main, document, params) => {
 
   const cellItems = [];
   if (cards) {
-    for (let i = 0; i < cards.children.length; i += 1) {
-      const cardItem = cards.children[i];
+    const ul = cards.querySelector('ul');
+    for (let i = 0; i < ul.children.length; i += 1) {
+      const cardItem = ul.children[i];
       const picImg = cardItem.querySelector('picture > img');
       picImg.src = cleanUpSrcUrl(picImg.src, originalURL);
       picImg.alt = picImg.alt || 'Plush Item';
 
-      const title = cardItem.querySelector(':scope div:nth-of-type(2) > p');
-      const body = cardItem.querySelector(':scope div:nth-of-type(2) > p:nth-child(2)');
+      const title = cardItem.querySelector('.cards-card-body > p > strong');
+      const body = cardItem.querySelector('.cards-card-body > p:nth-of-type(2)');
 
       const p = document.createElement('p');
       p.appendChild(title);
@@ -25,6 +26,7 @@ const createCards = (main, document, params) => {
     const cells = [['Cards'], ...cellItems];
 
     const block = WebImporter.DOMUtils.createTable(cells, document);
+    cards.innerHTML = '';
     cards.append(block);
   }
 };
