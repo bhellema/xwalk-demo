@@ -28,7 +28,7 @@ export default async function decorate(block) {
     const divider = div({ class: 'featured-card-divider' });
     const body = div({ class: 'featured-card-body' }, categoryEl, titleEl);
     const action = a(
-      { class: 'button outlined', href: anchor.href },
+      { class: 'button outlined', href: anchor?.href },
       span('View Details'),
     );
     liEl.append(picEl, body, divider, action);
