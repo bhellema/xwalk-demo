@@ -115,13 +115,14 @@ var CustomImportScript = (() => {
     const cards = main.querySelector(".cards");
     const cellItems = [];
     if (cards) {
-      for (let i = 0; i < cards.children.length; i += 1) {
-        const cardItem = cards.children[i];
+      const ul = cards.querySelector("ul");
+      for (let i = 0; i < ul.children.length; i += 1) {
+        const cardItem = ul.children[i];
         const picImg = cardItem.querySelector("picture > img");
         picImg.src = cleanUpSrcUrl(picImg.src, originalURL);
         picImg.alt = picImg.alt || "Plush Item";
-        const title = cardItem.querySelector(":scope div:nth-of-type(2) > p");
-        const body = cardItem.querySelector(":scope div:nth-of-type(2) > p:nth-child(2)");
+        const title = cardItem.querySelector(".cards-card-body > p > strong");
+        const body = cardItem.querySelector(".cards-card-body > p:nth-of-type(2)");
         const p = document.createElement("p");
         p.appendChild(title);
         p.appendChild(body);
@@ -129,6 +130,7 @@ var CustomImportScript = (() => {
       }
       const cells = [["Cards"], ...cellItems];
       const block = WebImporter.DOMUtils.createTable(cells, document);
+      cards.innerHTML = "";
       cards.append(block);
     }
   };
@@ -143,18 +145,18 @@ var CustomImportScript = (() => {
       const img = div1.querySelector("picture > img");
       img.src = cleanUpSrcUrl(img.src, originalURL);
       const heading = teaser.querySelector(":scope div:nth-of-type(2)");
-      const eyebrow = teaser.querySelector(":scope div:nth-of-type(3) h5");
-      const longDesc = teaser.querySelector(":scope div:nth-of-type(4)");
-      const shortDesc = teaser.querySelector(":scope div:nth-of-type(5)");
-      const cta1 = teaser.querySelector(":scope div:nth-of-type(6) a");
-      const cta2 = teaser.querySelector(":scope div:nth-of-type(7) a");
+      const eyebrow = teaser.querySelector(".eyebrow");
+      const longDesc = teaser.querySelector(".long-description");
+      const shortDesc = teaser.querySelector("h5");
+      const cta1 = teaser.querySelector(".cta a");
+      const cta2 = teaser.querySelector(".cta2 a");
       const rows = [
         ["Teaser"],
         [img || ""],
-        [eyebrow.textContent.trim() || ""],
-        [heading.textContent.trim() || ""],
-        [longDesc.textContent.trim() || ""],
-        [shortDesc.textContent.trim() || ""],
+        [(eyebrow == null ? void 0 : eyebrow.textContent.trim()) || ""],
+        [(heading == null ? void 0 : heading.textContent.trim()) || ""],
+        [(longDesc == null ? void 0 : longDesc.textContent.trim()) || ""],
+        [(shortDesc == null ? void 0 : shortDesc.textContent.trim()) || ""],
         [cta1 || ""],
         [cta2 || ""]
       ];
@@ -219,7 +221,13 @@ var CustomImportScript = (() => {
         img.src = cleanUpSrcUrl(img.src, originalURL);
       }
       const heading = slide.querySelector("h2");
-      rows.push([img || "", heading ? heading.textContent.trim() : ""]);
+      const subText = slide.querySelector("p");
+      const subTextValue = subText === null ? "" : subText.textContent.trim();
+      rows.push([
+        img || "",
+        heading ? heading.textContent.trim() : "",
+        subTextValue
+      ]);
     });
     const block = WebImporter.DOMUtils.createTable(rows, document);
     carousel.innerHTML = "";

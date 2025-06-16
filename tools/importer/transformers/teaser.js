@@ -10,10 +10,9 @@ const createTeaser = (main, document, params) => {
     const img = div1.querySelector('picture > img');
     img.src = cleanUpSrcUrl(img.src, originalURL);
 
-    const heading = teaser.querySelector(':scope div:nth-of-type(2)');
     const eyebrow = teaser.querySelector('.eyebrow');
+    const title = teaser.querySelector('.title h5');
     const longDesc = teaser.querySelector('.long-description');
-    const shortDesc = teaser.querySelector('h5');
     const cta1 = teaser.querySelector('.cta a');
     const cta2 = teaser.querySelector('.cta2 a');
 
@@ -21,9 +20,8 @@ const createTeaser = (main, document, params) => {
       ['Teaser'],
       [img || ''],
       [eyebrow?.textContent.trim() || ''],
-      [heading?.textContent.trim() || ''],
+      [title?.textContent.trim() || ''],
       [longDesc?.textContent.trim() || ''],
-      [shortDesc?.textContent.trim() || ''],
       [cta1 || ''],
       [cta2 || ''],
     ];
