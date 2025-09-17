@@ -10,10 +10,19 @@ export default async function decorate(block) {
     moveInstrumentation(row, rowItem);
 
     const dt = document.createElement('dt');
-    moveInstrumentation(row.querySelector(':scope > div:first-child > div'), dt);
+    const dtItem = row.querySelector(':scope > div:first-child > div');
+    if (dtItem) {
+      moveInstrumentation(dtItem, dt);
+    }
+
     dt.textContent = row.querySelector(':scope > div:first-child').textContent;
+
     const dd = document.createElement('dd');
-    moveInstrumentation(row.querySelector(':scope > div:last-child > div'), dd);
+    const ddItem = row.querySelector(':scope > div:last-child > div');
+    if (ddItem) {
+      moveInstrumentation(ddItem, dd);
+    }
+
     dd.textContent = row.querySelector(':scope > div:last-child').textContent;
 
     rowItem.appendChild(dt);
