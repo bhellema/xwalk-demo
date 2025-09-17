@@ -25,19 +25,14 @@
 
 /* Scenario 2: dt/dd wrapped in description-list-item divs */
 .description-list:has(.description-list-item) {
-  display: block;
-}
-
-.description-list-item {
   display: grid;
   grid-template-columns: max-content 1fr;
   gap: 0.5rem 2rem;
   align-items: center;
-  margin-bottom: 0.5rem;
 }
 
-.description-list-item:last-child {
-  margin-bottom: 0;
+.description-list-item {
+  display: contents;
 }
 
 .description-list-item dt {
