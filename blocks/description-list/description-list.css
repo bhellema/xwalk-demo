@@ -1,0 +1,22 @@
+.description-list {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.5rem 2rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.description-list dt {
+  grid-column: 1;
+  margin: 0;
+  font-weight: 700;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.description-list dd {
+  grid-column: 2;
+  margin: 0;
+}

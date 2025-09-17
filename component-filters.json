@@ -20,7 +20,8 @@
       "modal",
       "teaser",
       "form",
-      "carousel"
+      "carousel",
+      "description-list"
     ]
   },
   {
@@ -48,6 +49,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "description-list",
+    "components": [
+      "description-list-item"
     ]
   },
   {

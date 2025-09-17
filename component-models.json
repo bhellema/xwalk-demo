@@ -211,6 +211,25 @@
     ]
   },
   {
+    "id": "description-list-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "key",
+        "label": "Key",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "value",
+        "value": "",
+        "label": "Value",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "featured-item",
     "fields": [
       {

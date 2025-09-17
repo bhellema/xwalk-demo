@@ -159,6 +159,36 @@
           }
         },
         {
+          "title": "Description List",
+          "id": "description-list",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Description List",
+                  "filter": "description-list"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Description List Item",
+          "id": "description-list-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Description List Item",
+                  "model": "description-list-item"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Featured",
           "id": "featured",
           "plugins": {
