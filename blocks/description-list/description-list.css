@@ -1,3 +1,4 @@
+/* Scenario 1: Direct dt/dd children in description-list */
 .description-list {
   display: grid;
   grid-template-columns: max-content 1fr;
@@ -8,7 +9,37 @@
   width: 100%;
 }
 
-.description-list dt,
+.description-list dt {
+  grid-column: 1;
+  margin: 0;
+  font-weight: 700;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.description-list dd {
+  grid-column: 2;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+/* Scenario 2: dt/dd wrapped in description-list-item divs */
+.description-list:has(.description-list-item) {
+  display: block;
+}
+
+.description-list-item {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.5rem 2rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.description-list-item:last-child {
+  margin-bottom: 0;
+}
+
 .description-list-item dt {
   grid-column: 1;
   margin: 0;
@@ -17,8 +48,8 @@
   text-align: right;
 }
 
-.description-list dd,
 .description-list-item dd {
   grid-column: 2;
   margin: 0;
+  word-wrap: break-word;
 }
