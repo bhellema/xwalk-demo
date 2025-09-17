@@ -1,3 +1,4 @@
+/* Scenario 1: Direct dt/dd children in description-list */
 .description-list {
   display: grid;
   grid-template-columns: max-content 1fr;
@@ -19,4 +20,31 @@
 .description-list dd {
   grid-column: 2;
   margin: 0;
+  word-wrap: break-word;
+}
+
+/* Scenario 2: dt/dd wrapped in description-list-item divs */
+.description-list:has(.description-list-item) {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.5rem 2rem;
+  align-items: center;
+}
+
+.description-list-item {
+  display: contents;
+}
+
+.description-list-item dt {
+  grid-column: 1;
+  margin: 0;
+  font-weight: 700;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.description-list-item dd {
+  grid-column: 2;
+  margin: 0;
+  word-wrap: break-word;
 }

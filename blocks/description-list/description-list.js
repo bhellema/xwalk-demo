@@ -5,20 +5,40 @@ export default async function decorate(block) {
   const descriptionList = document.createElement('dl');
   descriptionList.classList.add('description-list');
   [...block.children].forEach((row) => {
-    const rowItem = document.createElement('div');
-    rowItem.classList.add('description-list-item');
-    moveInstrumentation(row, rowItem);
+    // check if in UE
+    const dtItem = row.querySelector(':scope > div:first-child > div');
+
+    let rowItem;
+    if (dtItem) {
+      rowItem = document.createElement('div');
+      rowItem.classList.add('description-list-item');
+      moveInstrumentation(row, rowItem);
+    }
 
     const dt = document.createElement('dt');
-    moveInstrumentation(row.querySelector(':scope > div:first-child > div'), dt);
+
+    if (dtItem) {
+      moveInstrumentation(dtItem, dt);
+    }
+
     dt.textContent = row.querySelector(':scope > div:first-child').textContent;
+
     const dd = document.createElement('dd');
-    moveInstrumentation(row.querySelector(':scope > div:last-child > div'), dd);
+    const ddItem = row.querySelector(':scope > div:last-child > div');
+    if (ddItem) {
+      moveInstrumentation(ddItem, dd);
+    }
+
     dd.textContent = row.querySelector(':scope > div:last-child').textContent;
 
-    rowItem.appendChild(dt);
-    rowItem.appendChild(dd);
-    descriptionList.appendChild(rowItem);
+    if (rowItem) {
+      rowItem.appendChild(dt);
+      rowItem.appendChild(dd);
+      descriptionList.appendChild(rowItem);
+    } else {
+      descriptionList.appendChild(dt);
+      descriptionList.appendChild(dd);
+    }
   });
   block.textContent = '';
 
