@@ -5,12 +5,18 @@ export default async function decorate(block) {
   const descriptionList = document.createElement('dl');
   descriptionList.classList.add('description-list');
   [...block.children].forEach((row) => {
-    const rowItem = document.createElement('div');
-    rowItem.classList.add('description-list-item');
-    moveInstrumentation(row, rowItem);
+    // check if in UE
+    const dtItem = row.querySelector(':scope > div:first-child > div');
+
+    let rowItem;
+    if (dtItem) {
+      rowItem = document.createElement('div');
+      rowItem.classList.add('description-list-item');
+      moveInstrumentation(row, rowItem);
+    }
 
     const dt = document.createElement('dt');
-    const dtItem = row.querySelector(':scope > div:first-child > div');
+
     if (dtItem) {
       moveInstrumentation(dtItem, dt);
     }
@@ -25,9 +31,14 @@ export default async function decorate(block) {
 
     dd.textContent = row.querySelector(':scope > div:last-child').textContent;
 
-    rowItem.appendChild(dt);
-    rowItem.appendChild(dd);
-    descriptionList.appendChild(rowItem);
+    if (rowItem) {
+      rowItem.appendChild(dt);
+      rowItem.appendChild(dd);
+      descriptionList.appendChild(rowItem);
+    } else {
+      descriptionList.appendChild(dt);
+      descriptionList.appendChild(dd);
+    }
   });
   block.textContent = '';
 
