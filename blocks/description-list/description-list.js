@@ -1,3 +1,5 @@
+import { moveInstrumentation } from '../../scripts/scripts.js';
+
 export default async function decorate(block) {
   // given a dom structure of key value pairs, create a description list
   const descriptionList = document.createElement('dl');
@@ -11,5 +13,8 @@ export default async function decorate(block) {
     descriptionList.appendChild(dd);
   });
   block.textContent = '';
+
+  moveInstrumentation(block, descriptionList);
+
   block.append(descriptionList);
 }
