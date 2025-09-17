@@ -8,7 +8,8 @@
   width: 100%;
 }
 
-.description-list dt {
+.description-list dt,
+.description-list-item dt {
   grid-column: 1;
   margin: 0;
   font-weight: 700;
@@ -16,7 +17,8 @@
   text-align: right;
 }
 
-.description-list dd {
+.description-list dd,
+.description-list-item dd {
   grid-column: 2;
   margin: 0;
 }
