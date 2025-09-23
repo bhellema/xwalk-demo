@@ -15,14 +15,17 @@ export default async function decorate(block) {
     const title = row.querySelector('div:nth-child(3)');
     const category = row.querySelector('div:nth-child(4)');
 
-    const picEl = createOptimizedPicture(
-      pic.src,
-      pic.title,
-      false,
-      [{ width: '750' }],
-    );
+    let picEl;
+    if (pic) {
+      picEl = createOptimizedPicture(
+        pic.src,
+        pic.title,
+        false,
+        [{ width: '750' }],
+      );
+      picEl.querySelector('img').classList.add('featured-card-image');
+    }
 
-    picEl.querySelector('img').classList.add('featured-card-image');
     const categoryEl = p({ class: 'featured-card-callout' }, category.textContent);
     const titleEl = h3(title.textContent);
     const divider = div({ class: 'featured-card-divider' });
@@ -31,7 +34,7 @@ export default async function decorate(block) {
       { class: 'button outlined', href: anchor?.href },
       span('View Details'),
     );
-    liEl.append(picEl, body, divider, action);
+    liEl.append(picEl || '', body, divider, action);
     ulEl.append(liEl);
   });
   block.textContent = '';
