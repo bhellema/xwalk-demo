@@ -37,6 +37,21 @@
     ]
   },
   {
+    "id": "mycolumns-ben",
+    "components": [
+      "mycolumns-ben-item"
+    ]
+  },
+  {
+    "id": "column",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title"
+    ]
+  },
+  {
     "id": "columns",
     "components": [
       "column"
